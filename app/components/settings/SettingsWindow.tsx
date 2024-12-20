@@ -26,7 +26,7 @@ export const SettingsWindow = ({ open, onClose }: SettingsProps) => {
 
   const tabs: { id: TabType; label: string; icon: string; component?: ReactElement }[] = [
     { id: 'chat-history', label: 'Chat History', icon: 'i-ph:book', component: <ChatHistoryTab /> },
-    { id: 'providers', label: 'Providers', icon: 'i-ph:key', component: <ProvidersTab /> },
+    // { id: 'providers', label: 'Providers', icon: 'i-ph:key', component: <ProvidersTab /> },
     { id: 'connection', label: 'Connection', icon: 'i-ph:link', component: <ConnectionsTab /> },
     { id: 'features', label: 'Features', icon: 'i-ph:star', component: <FeaturesTab /> },
     ...(debug
@@ -92,7 +92,7 @@ export const SettingsWindow = ({ open, onClose }: SettingsProps) => {
                   </button>
                 ))}
                 <div className="mt-auto flex flex-col gap-2">
-                  <a
+                  {/* <a
                     href="https://github.com/stackblitz-labs/bolt.diy"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -100,9 +100,9 @@ export const SettingsWindow = ({ open, onClose }: SettingsProps) => {
                   >
                     <div className="i-ph:github-logo" />
                     GitHub
-                  </a>
+                  </a> */}
                   <a
-                    href="https://stackblitz-labs.github.io/bolt.diy/"
+                    href="https://support.myapps.ai"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={classNames(styles['settings-button'], 'flex items-center gap-2')}

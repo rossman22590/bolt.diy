@@ -40,8 +40,8 @@ export function getAPIKey(cloudflareEnv: Env, provider: string, userApiKeys?: Re
       return env.HuggingFace_API_KEY || cloudflareEnv.HuggingFace_API_KEY;
     case 'OpenRouter':
       return env.OPEN_ROUTER_API_KEY || cloudflareEnv.OPEN_ROUTER_API_KEY;
-    case 'Deepseek':
-      return env.DEEPSEEK_API_KEY || cloudflareEnv.DEEPSEEK_API_KEY;
+    // case 'Deepseek':
+    //   return env.DEEPSEEK_API_KEY || cloudflareEnv.DEEPSEEK_API_KEY;
     case 'Mistral':
       return env.MISTRAL_API_KEY || cloudflareEnv.MISTRAL_API_KEY;
     case 'OpenAILike':

@@ -42,35 +42,35 @@ const PROVIDER_LIST: ProviderInfo[] = [
     ],
     getApiKeyLink: 'https://console.anthropic.com/settings/keys',
   },
-  {
-    name: 'Ollama',
-    staticModels: [],
-    getDynamicModels: getOllamaModels,
-    getApiKeyLink: 'https://ollama.com/download',
-    labelForGetApiKey: 'Download Ollama',
-    icon: 'i-ph:cloud-arrow-down',
-  },
-  {
-    name: 'OpenAILike',
-    staticModels: [],
-    getDynamicModels: getOpenAILikeModels,
-  },
-  {
-    name: 'Cohere',
-    staticModels: [
-      { name: 'command-r-plus-08-2024', label: 'Command R plus Latest', provider: 'Cohere', maxTokenAllowed: 4096 },
-      { name: 'command-r-08-2024', label: 'Command R Latest', provider: 'Cohere', maxTokenAllowed: 4096 },
-      { name: 'command-r-plus', label: 'Command R plus', provider: 'Cohere', maxTokenAllowed: 4096 },
-      { name: 'command-r', label: 'Command R', provider: 'Cohere', maxTokenAllowed: 4096 },
-      { name: 'command', label: 'Command', provider: 'Cohere', maxTokenAllowed: 4096 },
-      { name: 'command-nightly', label: 'Command Nightly', provider: 'Cohere', maxTokenAllowed: 4096 },
-      { name: 'command-light', label: 'Command Light', provider: 'Cohere', maxTokenAllowed: 4096 },
-      { name: 'command-light-nightly', label: 'Command Light Nightly', provider: 'Cohere', maxTokenAllowed: 4096 },
-      { name: 'c4ai-aya-expanse-8b', label: 'c4AI Aya Expanse 8b', provider: 'Cohere', maxTokenAllowed: 4096 },
-      { name: 'c4ai-aya-expanse-32b', label: 'c4AI Aya Expanse 32b', provider: 'Cohere', maxTokenAllowed: 4096 },
-    ],
-    getApiKeyLink: 'https://dashboard.cohere.com/api-keys',
-  },
+  // {
+  //   name: 'Ollama',
+  //   staticModels: [],
+  //   getDynamicModels: getOllamaModels,
+  //   getApiKeyLink: 'https://ollama.com/download',
+  //   labelForGetApiKey: 'Download Ollama',
+  //   icon: 'i-ph:cloud-arrow-down',
+  // },
+  // {
+  //   name: 'OpenAILike',
+  //   staticModels: [],
+  //   getDynamicModels: getOpenAILikeModels,
+  // },
+  // {
+  //   name: 'Cohere',
+  //   staticModels: [
+  //     { name: 'command-r-plus-08-2024', label: 'Command R plus Latest', provider: 'Cohere', maxTokenAllowed: 4096 },
+  //     { name: 'command-r-08-2024', label: 'Command R Latest', provider: 'Cohere', maxTokenAllowed: 4096 },
+  //     { name: 'command-r-plus', label: 'Command R plus', provider: 'Cohere', maxTokenAllowed: 4096 },
+  //     { name: 'command-r', label: 'Command R', provider: 'Cohere', maxTokenAllowed: 4096 },
+  //     { name: 'command', label: 'Command', provider: 'Cohere', maxTokenAllowed: 4096 },
+  //     { name: 'command-nightly', label: 'Command Nightly', provider: 'Cohere', maxTokenAllowed: 4096 },
+  //     { name: 'command-light', label: 'Command Light', provider: 'Cohere', maxTokenAllowed: 4096 },
+  //     { name: 'command-light-nightly', label: 'Command Light Nightly', provider: 'Cohere', maxTokenAllowed: 4096 },
+  //     { name: 'c4ai-aya-expanse-8b', label: 'c4AI Aya Expanse 8b', provider: 'Cohere', maxTokenAllowed: 4096 },
+  //     { name: 'c4ai-aya-expanse-32b', label: 'c4AI Aya Expanse 32b', provider: 'Cohere', maxTokenAllowed: 4096 },
+  //   ],
+  //   getApiKeyLink: 'https://dashboard.cohere.com/api-keys',
+  // },
   {
     name: 'OpenRouter',
     staticModels: [
@@ -238,14 +238,14 @@ const PROVIDER_LIST: ProviderInfo[] = [
     ],
     getApiKeyLink: 'https://docs.x.ai/docs/quickstart#creating-an-api-key',
   },
-  {
-    name: 'Deepseek',
-    staticModels: [
-      { name: 'deepseek-coder', label: 'Deepseek-Coder', provider: 'Deepseek', maxTokenAllowed: 8000 },
-      { name: 'deepseek-chat', label: 'Deepseek-Chat', provider: 'Deepseek', maxTokenAllowed: 8000 },
-    ],
-    getApiKeyLink: 'https://platform.deepseek.com/apiKeys',
-  },
+  // {
+  //   name: 'Deepseek',
+  //   staticModels: [
+  //     { name: 'deepseek-coder', label: 'Deepseek-Coder', provider: 'Deepseek', maxTokenAllowed: 8000 },
+  //     { name: 'deepseek-chat', label: 'Deepseek-Chat', provider: 'Deepseek', maxTokenAllowed: 8000 },
+  //   ],
+  //   getApiKeyLink: 'https://platform.deepseek.com/apiKeys',
+  // },
   {
     name: 'Mistral',
     staticModels: [
@@ -261,64 +261,64 @@ const PROVIDER_LIST: ProviderInfo[] = [
     ],
     getApiKeyLink: 'https://console.mistral.ai/api-keys/',
   },
-  {
-    name: 'LMStudio',
-    staticModels: [],
-    getDynamicModels: getLMStudioModels,
-    getApiKeyLink: 'https://lmstudio.ai/',
-    labelForGetApiKey: 'Get LMStudio',
-    icon: 'i-ph:cloud-arrow-down',
-  },
-  {
-    name: 'Together',
-    getDynamicModels: getTogetherModels,
-    staticModels: [
-      {
-        name: 'Qwen/Qwen2.5-Coder-32B-Instruct',
-        label: 'Qwen/Qwen2.5-Coder-32B-Instruct',
-        provider: 'Together',
-        maxTokenAllowed: 8000,
-      },
-      {
-        name: 'meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo',
-        label: 'meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo',
-        provider: 'Together',
-        maxTokenAllowed: 8000,
-      },
+  // {
+  //   name: 'LMStudio',
+  //   staticModels: [],
+  //   getDynamicModels: getLMStudioModels,
+  //   getApiKeyLink: 'https://lmstudio.ai/',
+  //   labelForGetApiKey: 'Get LMStudio',
+  //   icon: 'i-ph:cloud-arrow-down',
+  // },
+  // {
+  //   name: 'Together',
+  //   getDynamicModels: getTogetherModels,
+  //   staticModels: [
+  //     {
+  //       name: 'Qwen/Qwen2.5-Coder-32B-Instruct',
+  //       label: 'Qwen/Qwen2.5-Coder-32B-Instruct',
+  //       provider: 'Together',
+  //       maxTokenAllowed: 8000,
+  //     },
+  //     {
+  //       name: 'meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo',
+  //       label: 'meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo',
+  //       provider: 'Together',
+  //       maxTokenAllowed: 8000,
+  //     },
 
-      {
-        name: 'mistralai/Mixtral-8x7B-Instruct-v0.1',
-        label: 'Mixtral 8x7B Instruct',
-        provider: 'Together',
-        maxTokenAllowed: 8192,
-      },
-    ],
-    getApiKeyLink: 'https://api.together.xyz/settings/api-keys',
-  },
-  {
-    name: 'Perplexity',
-    staticModels: [
-      {
-        name: 'llama-3.1-sonar-small-128k-online',
-        label: 'Sonar Small Online',
-        provider: 'Perplexity',
-        maxTokenAllowed: 8192,
-      },
-      {
-        name: 'llama-3.1-sonar-large-128k-online',
-        label: 'Sonar Large Online',
-        provider: 'Perplexity',
-        maxTokenAllowed: 8192,
-      },
-      {
-        name: 'llama-3.1-sonar-huge-128k-online',
-        label: 'Sonar Huge Online',
-        provider: 'Perplexity',
-        maxTokenAllowed: 8192,
-      },
-    ],
-    getApiKeyLink: 'https://www.perplexity.ai/settings/api',
-  },
+  //     {
+  //       name: 'mistralai/Mixtral-8x7B-Instruct-v0.1',
+  //       label: 'Mixtral 8x7B Instruct',
+  //       provider: 'Together',
+  //       maxTokenAllowed: 8192,
+  //     },
+  //   ],
+  //   getApiKeyLink: 'https://api.together.xyz/settings/api-keys',
+  // },
+  // {
+  //   name: 'Perplexity',
+  //   staticModels: [
+  //     {
+  //       name: 'llama-3.1-sonar-small-128k-online',
+  //       label: 'Sonar Small Online',
+  //       provider: 'Perplexity',
+  //       maxTokenAllowed: 8192,
+  //     },
+  //     {
+  //       name: 'llama-3.1-sonar-large-128k-online',
+  //       label: 'Sonar Large Online',
+  //       provider: 'Perplexity',
+  //       maxTokenAllowed: 8192,
+  //     },
+  //     {
+  //       name: 'llama-3.1-sonar-huge-128k-online',
+  //       label: 'Sonar Huge Online',
+  //       provider: 'Perplexity',
+  //       maxTokenAllowed: 8192,
+  //     },
+  //   ],
+  //   getApiKeyLink: 'https://www.perplexity.ai/settings/api',
+  // },
 ];
 
 export const providerBaseUrlEnvKeys: Record<string, { baseUrlKey?: string; apiTokenKey?: string }> = {
@@ -340,17 +340,17 @@ export const providerBaseUrlEnvKeys: Record<string, { baseUrlKey?: string; apiTo
   Google: {
     apiTokenKey: 'GOOGLE_GENERATIVE_AI_API_KEY',
   },
-  OpenAILike: {
-    baseUrlKey: 'OPENAI_LIKE_API_BASE_URL',
-    apiTokenKey: 'OPENAI_LIKE_API_KEY',
-  },
-  Together: {
-    baseUrlKey: 'TOGETHER_API_BASE_URL',
-    apiTokenKey: 'TOGETHER_API_KEY',
-  },
-  Deepseek: {
-    apiTokenKey: 'DEEPSEEK_API_KEY',
-  },
+  // OpenAILike: {
+  //   baseUrlKey: 'OPENAI_LIKE_API_BASE_URL',
+  //   apiTokenKey: 'OPENAI_LIKE_API_KEY',
+  // },
+  // Together: {
+  //   baseUrlKey: 'TOGETHER_API_BASE_URL',
+  //   apiTokenKey: 'TOGETHER_API_KEY',
+  // },
+  // Deepseek: {
+  //   apiTokenKey: 'DEEPSEEK_API_KEY',
+  // },
   Mistral: {
     apiTokenKey: 'MISTRAL_API_KEY',
   },
@@ -360,15 +360,15 @@ export const providerBaseUrlEnvKeys: Record<string, { baseUrlKey?: string; apiTo
   xAI: {
     apiTokenKey: 'XAI_API_KEY',
   },
-  Cohere: {
-    apiTokenKey: 'COHERE_API_KEY',
-  },
-  Perplexity: {
-    apiTokenKey: 'PERPLEXITY_API_KEY',
-  },
-  Ollama: {
-    baseUrlKey: 'OLLAMA_API_BASE_URL',
-  },
+  // Cohere: {
+  //   apiTokenKey: 'COHERE_API_KEY',
+  // },
+  // Perplexity: {
+  //   apiTokenKey: 'PERPLEXITY_API_KEY',
+  // },
+  // Ollama: {
+  //   baseUrlKey: 'OLLAMA_API_BASE_URL',
+  // },
 };
 
 export const getProviderBaseUrlAndKey = (options: {
