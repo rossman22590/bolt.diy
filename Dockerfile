@@ -2,12 +2,12 @@ FROM node:20.18.0 AS base
 
 WORKDIR /app
 
-# Install dependencies (this step is cached as long as the dependencies don't change)
+# Copy dependency definition files first to leverage Docker cache
 COPY package.json pnpm-lock.yaml ./
 
-# Enable Corepack and explicitly prepare/activate the latest pnpm version
+# Enable Corepack and explicitly prepare/activate a specific pnpm version to avoid signature mismatches
 RUN corepack enable pnpm && \
-    corepack prepare pnpm@latest --activate && \
+    corepack prepare pnpm@8.7.1 --activate && \
     pnpm install
 
 # Copy the rest of your app's source code
@@ -83,6 +83,7 @@ ENV GROQ_API_KEY=${GROQ_API_KEY} \
 
 RUN mkdir -p ${WORKDIR}/run
 CMD pnpm run dev --host
+
 
 # ARG BASE=node:20.18.0
 # FROM ${BASE} AS base
