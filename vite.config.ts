@@ -73,6 +73,14 @@ const gitInfo = getGitInfo();
 
 export default defineConfig((config) => {
   return {
+    server: {
+      // Add the allowed host
+      allowedHosts: [
+        'localhost',
+        '127.0.0.1',
+        'confident-warmth-copy-production.up.railway.app',
+      ],
+    },
     define: {
       __COMMIT_HASH: JSON.stringify(gitInfo.commitHash),
       __GIT_BRANCH: JSON.stringify(gitInfo.branch),
