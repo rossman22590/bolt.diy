@@ -8,23 +8,18 @@ import { motion } from 'framer-motion';
 import { classNames } from '~/utils/classNames';
 import { toast } from 'react-toastify';
 import { providerBaseUrlEnvKeys } from '~/utils/constants';
-import { SiAmazon, SiGoogle, SiHuggingface, SiPerplexity, SiOpenai } from 'react-icons/si';
+import { SiGoogle, SiHuggingface, SiPerplexity, SiOpenai } from 'react-icons/si';
 import { BsRobot, BsCloud } from 'react-icons/bs';
 import { TbBrain, TbCloudComputing } from 'react-icons/tb';
-import { BiCodeBlock, BiChip } from 'react-icons/bi';
 import { FaCloud, FaBrain } from 'react-icons/fa';
 import type { IconType } from 'react-icons';
 
 // Add type for provider names to ensure type safety
 type ProviderName =
-  | 'AmazonBedrock'
   | 'Anthropic'
-  | 'Cohere'
-  | 'Deepseek'
   | 'Google'
   | 'Groq'
   | 'HuggingFace'
-  | 'Hyperbolic'
   | 'Mistral'
   | 'OpenAI'
   | 'OpenRouter'
@@ -34,14 +29,10 @@ type ProviderName =
 
 // Update the PROVIDER_ICONS type to use the ProviderName type
 const PROVIDER_ICONS: Record<ProviderName, IconType> = {
-  AmazonBedrock: SiAmazon,
   Anthropic: FaBrain,
-  Cohere: BiChip,
-  Deepseek: BiCodeBlock,
   Google: SiGoogle,
   Groq: BsCloud,
   HuggingFace: SiHuggingface,
-  Hyperbolic: TbCloudComputing,
   Mistral: TbBrain,
   OpenAI: SiOpenai,
   OpenRouter: FaCloud,

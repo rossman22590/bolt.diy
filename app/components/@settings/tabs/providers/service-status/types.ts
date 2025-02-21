@@ -1,13 +1,9 @@
 import type { IconType } from 'react-icons';
 
 export type ProviderName =
-  | 'AmazonBedrock'
-  | 'Cohere'
-  | 'Deepseek'
   | 'Google'
   | 'Groq'
   | 'HuggingFace'
-  | 'Hyperbolic'
   | 'Mistral'
   | 'OpenRouter'
   | 'Perplexity'
