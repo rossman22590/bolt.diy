@@ -78,7 +78,7 @@ export default defineConfig((config) => {
       allowedHosts: [
         'localhost',
         '127.0.0.1',
-        'confident-warmth-copy-production.up.railway.app',
+        'confident-warmth-51949491514.up.railway.app',
       ],
     },
     define: {
