@@ -13,6 +13,13 @@ dotenv.config();
 
 export default defineConfig((config) => {
   return {
+    server: {
+      allowedHosts: [
+        'localhost',
+        '127.0.0.1',
+        'ai-tutor-console.up.railway.app'
+      ],
+    },
     define: {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     },
